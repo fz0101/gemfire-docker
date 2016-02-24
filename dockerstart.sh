@@ -86,7 +86,7 @@ case "$api_authentication_validation" in
       authenticate_api($api_token)
       if [-z "$APIResponse"] == 200
         # we are authenticated, now, we can go get the product we're looking for.
-        
+
     fi
 
     ;;
@@ -98,11 +98,3 @@ case "$api_authentication_validation" in
       exception_exit
       ;;
   esac
-
-
-
-if [-z "$api_validation"]; then
-  echo "You have not entered an answer, please enter Yes or No! Program will close!!!"
-  sleepytime 5
-  exception_exit
-fi
